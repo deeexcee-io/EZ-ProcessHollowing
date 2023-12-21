@@ -76,6 +76,21 @@ Paste the XOR Encoded Shellcode in (You can turn on Defender now it wont be pick
 
 ![image](https://github.com/deeexcee-io/AV-Stuff/assets/130473605/d8da75b5-2687-4ac8-a27a-25bd4f071332)
 
+This is where the process is created and set to run in a suspended state. This can be changed. Currently set to Notepad which is bad opsec.
+
+```python
+            StartupInfo sInfo = new StartupInfo();
+            ProcessInfo pInfo = new ProcessInfo();
+            bool cResult = CreateProcess(null, "c:\\windows\\system32\\notepad.exe", IntPtr.Zero, IntPtr.Zero,
+                false, CREATE_SUSPENDED, IntPtr.Zero, null, ref sInfo, out pInfo);
+```
+
+Process Hacker shows a network connection and cmd child processes 😂
+
+![image](https://github.com/deeexcee-io/EZ-ProcessHollowing/assets/130473605/d8c058b8-fe0b-4e40-a059-66fcc1c7d596)
+
+![image](https://github.com/deeexcee-io/EZ-ProcessHollowing/assets/130473605/cefaa838-1221-4941-9179-29c8838a3715)
+
 If you changed the XOR Key in the previous file, ensure you change it here aswell otherwise it wont decode 
 
 ![image](https://github.com/deeexcee-io/AV-Stuff/assets/130473605/fd36f91e-f5fc-4d00-89c0-0ed04b66f9ac)
